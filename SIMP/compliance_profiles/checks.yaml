@@ -56,6 +56,7 @@ checks:
       - CCI-000172
     oval-ids:
     - xccdf_org:ssgproject:content_rule_rsyslog_cron_logging
+    - rsyslog_cron_logging
   oval:com.puppet.forge.simp.simp_rsyslog.forward.dest_type:
     settings:
       parameter: simp_rsyslog::forward::dest_type
