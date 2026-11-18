@@ -151,7 +151,7 @@ rather than assuming `simp_options` is present in the catalog.
 
 Module dependencies (from `metadata.json`):
 
-- `simp/rsyslog` `>= 7.6.0 < 11.0.0` — the component module this profile drives
+- `simp/rsyslog` `>= 7.6.0 < 12.0.0` — the component module this profile drives
   (provides `rsyslog`, `rsyslog::server`, and the `rsyslog::rule::*` defines).
 - `simp/simplib` `>= 4.9.0 < 8.0.0` — provides `simplib::lookup` and
   `simplib::assert_optional_dependency`.
