@@ -130,6 +130,7 @@ class simp_rsyslog (
       'crond',
       'snmpd',
       'sudo',
+      'sudosh',
       'systemd',
       'tlog',
       'tlog-rec-session',

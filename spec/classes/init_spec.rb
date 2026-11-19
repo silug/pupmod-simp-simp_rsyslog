@@ -21,6 +21,7 @@ describe 'simp_rsyslog' do
           "($programname == 'crond')",
           "($programname == 'snmpd')",
           "($programname == 'sudo')",
+          "($programname == 'sudosh')",
           "($programname == 'systemd')",
           "($programname == 'tlog')",
           "($programname == 'tlog-rec-session')",
@@ -223,6 +224,7 @@ describe 'simp_rsyslog' do
             )
           }
           it { is_expected.to contain_rsyslog__rule__local('10_00_default_emerg') }
+          it { is_expected.to contain_rsyslog__rule__local('10_default_sudosh') }
           it { is_expected.to contain_rsyslog__rule__local('10_default_tlog') }
           it { is_expected.to contain_rsyslog__rule__local('10_default_httpd_error') }
           it { is_expected.to contain_rsyslog__rule__local('11_default_httpd') }
@@ -285,6 +287,7 @@ describe 'simp_rsyslog' do
           it { is_expected.not_to contain_rsyslog__rule__local('10_00_default_mail') }
           it { is_expected.not_to contain_rsyslog__rule__local('10_00_default_cron') }
           it { is_expected.not_to contain_rsyslog__rule__local('10_00_default_emerg') }
+          it { is_expected.not_to contain_rsyslog__rule__local('10_default_sudosh') }
           it { is_expected.not_to contain_rsyslog__rule__local('10_default_tlog') }
           it { is_expected.not_to contain_rsyslog__rule__local('10_default_httpd_error') }
           it { is_expected.not_to contain_rsyslog__rule__local('11_default_httpd') }
@@ -322,6 +325,7 @@ describe 'simp_rsyslog' do
           it { is_expected.not_to contain_rsyslog__rule__local('10_00_default_mail') }
           it { is_expected.not_to contain_rsyslog__rule__local('10_00_default_cron') }
           it { is_expected.not_to contain_rsyslog__rule__local('10_00_default_emerg') }
+          it { is_expected.not_to contain_rsyslog__rule__local('10_default_sudosh') }
           it { is_expected.not_to contain_rsyslog__rule__local('10_default_tlog') }
           it { is_expected.not_to contain_rsyslog__rule__local('10_default_httpd_error') }
           it { is_expected.not_to contain_rsyslog__rule__local('11_default_httpd') }
